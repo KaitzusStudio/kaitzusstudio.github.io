@@ -45,3 +45,7 @@ body {
 .contact a:hover {
     text-decoration: underline; /* Korostus, kun linkin päällä on hiiri */
 }
+
+audio {
+    display: none; /* Piilottaa audio-elementin */
+}
