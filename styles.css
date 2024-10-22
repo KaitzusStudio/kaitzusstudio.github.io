@@ -1,66 +1,60 @@
-/* Poista marginaalit ja täytöt, jotta sivu on tyhjä lukuun ottamatta logoa */
+/* Yleinen tyylitys */
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Käytä koko selaimen korkeutta */
-    background-color: white; /* Taustaväri, voit vaihtaa sen haluamaksesi */
-    flex-direction: column; /* Elementit pystysuunnassa */
+    font-family: Arial, sans-serif; /* Kirjasin */
+    background-color: #f4f4f4; /* Taustaväri */
+    color: #333; /* Tekstin väri */
+    margin: 0; /* Marginaalit pois */
+    padding: 0; /* Täyttö pois */
+    text-align: center; /* Keskittää sisällön */
 }
 
-/* Logon säätö */
-.logo {
-    max-width: 80%; /* Skaalaa logo korkeintaan 80% leveydestä */
-    height: auto; /* Säilytä mittasuhteet */
-}
-
-/* Logon ympärillä oleva säiliö */
+/* Logon säiliö */
 .logo-container {
-    text-align: center;
-    margin: 20px;
+    margin: 50px auto; /* Keskittää logon ja tekstin */
+    padding: 20px; /* Täyttö logon ympärillä */
 }
 
-/* Työn alla -tekstin tyylit */
+/* Logo */
+.logo {
+    width: 200px; /* Logon leveys */
+    height: auto; /* Korkeus automaattisesti */
+}
+
+/* Työn alla -teksti */
 .under-construction {
-    font-size: 24px;
-    color: #333;
-    margin-top: 20px;
-    font-weight: bold;
+    font-weight: bold; /* Paksu teksti */
+    margin-top: 20px; /* Yläreunan marginaali */
+    font-size: 24px; /* Fonttikoko */
+    color: #444; /* Tekstin väri */
 }
 
-/* Sähköpostiosoitteen tyylit */
+/* Sähköpostiteksti */
 .contact {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #555;
+    margin-top: 10px; /* Yläreunan marginaali */
+    font-size: 18px; /* Fonttikoko */
 }
 
-.contact a {
-    text-decoration: none;
-    color: #007acc; /* Sähköpostilinkin väri */
-}
-
-.contact a:hover {
-    text-decoration: underline; /* Korostus, kun linkin päällä on hiiri */
-}
-
-audio {
-    display: none; /* Piilottaa audio-elementin */
-}
-
+/* Äänenvoimakkuuden säätö */
 .controls {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 20px; /* Yläreunan marginaali */
 }
 
-label {
-    margin-right: 10px;
-}
-
+/* Äänenvoimakkuuden säätöliukusäädin */
 input[type="range"] {
-    margin: 0 10px;
+    width: 300px; /* Säädettävän alueen leveys */
 }
 
+/* Mykistyspainike */
+button {
+    background-color: #444; /* Taustaväri */
+    color: white; /* Tekstin väri */
+    border: none; /* Ei reunaa */
+    padding: 10px 15px; /* Täyttö */
+    margin-left: 10px; /* Vasemman reunan marginaali */
+    cursor: pointer; /* Muuttaa osoittimen painikkeeksi */
+}
+
+button:hover {
+    background-color: #666; /* Taustavärin muutos hiiren ollessa päällä */
+}
 
