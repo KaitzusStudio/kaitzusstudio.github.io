@@ -49,3 +49,17 @@ body {
 audio {
     display: none; /* Piilottaa audio-elementin */
 }
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="range"] {
+    margin: 0 10px;
+}
+
