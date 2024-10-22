@@ -7,53 +7,45 @@
     <link rel="stylesheet" href="styles.css"> <!-- Linkki CSS-tiedostoon -->
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Kaitzus Studio Logo" class="logo"> <!-- Tuo logo Figmasta -->
-    </header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Kaitzus Studio Logo" class="logo"> <!-- Logon tiedostopolku -->
+        <p class="under-construction">Sivut kehitteillä!</p> <!-- Esimerkki: "Työn alla" -teksti -->
+        <p class="contact">Ota yhteyttä: <a href="mailto:kaitzusstudio@gmail.com">kaitzusstudio@gmail.com</a></p> <!-- Sähköpostiosoite -->
+    </div>
 
-    <!-- Musiikkisoitin -->
-    <audio id="background-music" autoplay loop controls>
+    <!-- Taustamusiikki -->
+    <audio id="background-music" autoplay loop>
         <source src="background-music.wav" type="audio/wav">
-        <p>Äänentoisto ei ole tuettu. Käytä modernia selainta, kuten Chromea tai Firefoxia.</p>
+        Your browser does not support the audio element.
     </audio>
 
-    <button onclick="toggleMute()">Mykistä/Poista mykistys</button>
-    <input type="range" id="volume-control" value="100" onchange="changeVolume(this.value)" />
+    <!-- Äänenvoimakkuuden säätö ja mykistys -->
+    <div class="controls">
+        <label for="volume">Äänenvoimakkuus:</label>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1"> <!-- 0-1 arvo -->
+        <button id="mute-button">Mykistä</button>
+    </div>
 
-    <!-- Teksti DJ Likainen Tiski -->
-    <p class="dj-text">DJ Likainen Tiski</p>
-
-    <nav>
-        <ul>
-            <li><a href="#about">Tietoja</a></li>
-            <li><a href="#contact">Ota yhteyttä</a></li>
-        </ul>
-    </nav>
-
-    <section id="about">
-        <h2>Tietoja</h2>
-        <p>Olen Kai Salovaara, freelance 3D-artisti ja musiikkituottaja. Tässä on esimerkki omista töistäni.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Ota yhteyttä</h2>
-        <p>Voit ottaa minuun yhteyttä sähköpostitse: <a href="mailto:kaitzusstudio@gmail.com">kaitzusstudio@gmail.com</a></p>
-    </section>
-
-    <footer>
-        <p>© 2024 Kaitzus Studio. Kaikki oikeudet pidätetään.</p>
-    </footer>
-
+    <script src="script.js"></script> <!-- Linkki JavaScript-tiedostoon -->
     <script>
-        const music = document.getElementById('background-music');
+        // JavaScript äänenvoimakkuuden säätämiseen ja mykistykseen
+        const audio = document.getElementById('background-music');
+        const volumeControl = document.getElementById('volume');
+        const muteButton = document.getElementById('mute-button');
 
-        function changeVolume(value) {
-            music.volume = value / 100; // Säädetään äänenvoimakkuus
-        }
+        // Aseta äänenvoimakkuus
+        volumeControl.addEventListener('input', function() {
+            audio.volume = this.value; // Asetetaan äänenvoimakkuus
+        });
 
-        function toggleMute() {
-            music.muted = !music.muted; // Mykistetään tai poistetaan mykistys
-        }
+        // Mykistyspainike
+        let isMuted = false;
+        muteButton.addEventListener('click', function() {
+            isMuted = !isMuted; // Vaihda mykistystila
+            audio.muted = isMuted; // Aseta mykistys
+            muteButton.textContent = isMuted ? 'Ota mykistys pois' : 'Mykistä'; // Vaihda painikkeen teksti
+        });
+
     </script>
 </body>
 </html>
