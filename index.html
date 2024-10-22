@@ -9,22 +9,26 @@
 <body>
     <div class="logo-container">
         <img src="logo.png" alt="Kaitzus Studio Logo" class="logo"> <!-- Logon tiedostopolku -->
-        <p class="under-construction">Sivut ovat kehitteillä!</p> <!-- Esimerkki: "Työn alla" -teksti -->
+        <p class="under-construction">Sivut kehitteillä!</p> <!-- Esimerkki: "Työn alla" -teksti -->
         <p class="contact">Ota yhteyttä: <a href="mailto:kaitzusstudio@gmail.com">kaitzusstudio@gmail.com</a></p> <!-- Sähköpostiosoite -->
     </div>
 
     <!-- Taustamusiikki -->
-    <audio autoplay loop>
-        <source src="background-music.mp3" type="audio/mpeg">
-        <!-- Voit myös lisätä muita formaatteja, kuten MP3, jos haluat -->
+    <audio id="background-music" autoplay loop>
+        <source src="background-music.wav" type="audio/wav">
         Your browser does not support the audio element.
     </audio>
 
-     <!-- Äänenvoimakkuuden säätö ja mykistys -->
-     <div class="controls">
+    <!-- Äänenvoimakkuuden säätö ja mykistys -->
+    <div class="controls">
         <label for="volume">Äänenvoimakkuus:</label>
         <input type="range" id="volume" min="0" max="1" step="0.01" value="1"> <!-- 0-1 arvo -->
         <button id="mute-button">Mykistä</button>
+    </div>
+
+    <!-- Kävijälaskuri -->
+    <div class="visitor-counter">
+        <p>Käynnit tällä sivulla: <span id="visit-count">0</span></p>
     </div>
 
     <script src="script.js"></script> <!-- Linkki JavaScript-tiedostoon -->
@@ -46,6 +50,12 @@
             audio.muted = isMuted; // Aseta mykistys
             muteButton.textContent = isMuted ? 'Ota mykistys pois' : 'Mykistä'; // Vaihda painikkeen teksti
         });
+
+        // Kävijälaskuri
+        let visitCount = localStorage.getItem('visitCount') || 0; // Hae nykyinen kävijälaskuri paikallisesta tallennustilasta
+        visitCount++; // Lisää 1 käynteihin
+        localStorage.setItem('visitCount', visitCount); // Tallenna uusi laskuri
+        document.getElementById('visit-count').textContent = visitCount; // Päivitä laskurin näkyminen
     </script>
 </body>
 </html>

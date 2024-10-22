@@ -63,3 +63,9 @@ input[type="range"] {
     margin: 0 10px;
 }
 
+.visitor-counter {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px; /* Suurempi fonttikoko */
+}
+
