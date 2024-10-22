@@ -12,7 +12,7 @@ body {
 
 /* Logon säätö */
 .logo {
-    max-width: 40%; /* Skaalaa logo korkeintaan 80% leveydestä */
+    max-width: 80%; /* Skaalaa logo korkeintaan 80% leveydestä */
     height: auto; /* Säilytä mittasuhteet */
 }
 
