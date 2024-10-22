@@ -1,71 +1,62 @@
-/* Poista marginaalit ja täytöt, jotta sivu on tyhjä lukuun ottamatta logoa */
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Käytä koko selaimen korkeutta */
-    background-color: white; /* Taustaväri, voit vaihtaa sen haluamaksesi */
-    flex-direction: column; /* Elementit pystysuunnassa */
 }
 
-/* Logon säätö */
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
 .logo {
-    max-width: 80%; /* Skaalaa logo korkeintaan 80% leveydestä */
-    height: auto; /* Säilytä mittasuhteet */
+    width: 150px; /* Logo-koko, voit säätää tätä haluamasi mukaan */
 }
 
-/* Logon ympärillä oleva säiliö */
-.logo-container {
-    text-align: center;
-    margin: 20px;
+nav {
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
 }
 
-/* Työn alla -tekstin tyylit */
-.under-construction {
-    font-size: 24px;
-    color: #333;
-    margin-top: 20px;
-    font-weight: bold;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Sähköpostiosoitteen tyylit */
-.contact {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #555;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.contact a {
+nav a {
+    color: white;
     text-decoration: none;
-    color: #007acc; /* Sähköpostilinkin väri */
 }
 
-.contact a:hover {
-    text-decoration: underline; /* Korostus, kun linkin päällä on hiiri */
+section {
+    padding: 20px;
+    margin: 10px 0;
 }
 
-audio {
-    display: none; /* Piilottaa audio-elementin */
-}
-
-.controls {
-    margin-top: 20px;
+footer {
     text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-label {
-    margin-right: 10px;
-}
-
-input[type="range"] {
-    margin: 0 10px;
-}
-
-.visitor-counter {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px; /* Suurempi fonttikoko */
+.dj-text {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px; /* Muuta fonttikokoa tarvittaessa */
+    color: #333; /* Muuta väriä tarvittaessa */
 }
 
