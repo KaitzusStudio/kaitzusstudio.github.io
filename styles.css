@@ -57,6 +57,7 @@ footer {
     bottom: 0;
     width: 100%; /* Kokoleveydeltä */
     box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.9); /* Kevyt varjo */
+    box-sizing: border-box; /* Sisällyttää padding laskuihin */
 }
 
 /* Musiikkisoittimen tyylit */
