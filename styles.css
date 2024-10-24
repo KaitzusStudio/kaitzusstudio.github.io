@@ -43,6 +43,7 @@ body {
 .linkedin-badge {
     text-align: center; /* Keskittää badge-elementin */
     margin-top: 20px; /* Lisää tilaa badge ja muiden elementtien väliin */
+}
 
 .contact a {
     text-decoration: none;
