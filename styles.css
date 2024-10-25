@@ -30,9 +30,9 @@ main {
 
 /* Napin tyylit */
 .navbar button {
-    margin: 50px; /* Lisää tilaa nappien väliin */
-    padding: 20px 100px; /* Lisää sisältötilaa napin sisällä */
-    font-size: 58px; /* Suurentaa fonttikokoa */
+    margin: 20px; /* Lisää tilaa nappien väliin */
+    padding: 5px 20px; /* Lisää sisältötilaa napin sisällä */
+    font-size: 28px; /* Suurentaa fonttikokoa */
     background-color: #3c113e; /* Napin taustaväri */
     color: white; /* Tekstin väri */
     border: none; /* Poistaa napin reunat */
@@ -55,9 +55,9 @@ main {
 
 /* Otsikon tyylit */
 h1 {
-    font-size: 150px; /* Suurentaa otsikon kokoa */
+    font-size: 40px; /* Suurentaa otsikon kokoa */
     text-align: center; /* Keskittää otsikon */
-    margin: 20px; /* Lisää tilaa ylle */
+    margin: 1px; /* Lisää tilaa ylle */
     color: #3c113e; /* Otsikon väri */
 }
 
@@ -72,12 +72,12 @@ footer {
     position: fixed; /* Kiinnittää footerin ikkunan alareunaan */
     bottom: 0; /* Sijoittaa footerin alalaitaan */
     left: 0; /* Tuo footerin kiinni vasempaan reunaan */
-    font-size: 24px;
+    font-size: 14px;
 }
 
 /* Suurempi tekstin koko */
 .content-text {
-    font-size: 54px; /* Koko fontille, säädä tarpeen mukaan */
+    font-size: 24px; /* Koko fontille, säädä tarpeen mukaan */
     color: #333; /* Tekstin väri, voit vaihtaa haluamaksesi */
     line-height: 1.5; /* Riviväli, jotta tekstistä tulee luettavampaa */
     text-align: center; /* Keskittää tekstin */
