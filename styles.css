@@ -3,11 +3,15 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /*height: 110vh; /* Käytä koko selaimen korkeutta */
-    background-color: white; /* Taustaväri, voit vaihtaa sen haluamaksesi */
     flex-direction: column; /* Elementit pystysuunnassa */
+    justify-content: flex-start; /* Sijoitetaan elementit ylhäältä alkaen */
+    align-items: center; /* Keskitetään vaakasuunnassa */
+    height: 100vh; /* Käytä koko selaimen korkeutta */
+    background-color: white; /* Taustaväri */
+}
+
+main {
+    flex: 1;
 }
 
 /* Logon säätö */
@@ -16,67 +20,74 @@ body {
     height: auto; /* Säilytä mittasuhteet */
 }
 
-/* Logon ympärillä oleva säiliö */
+/* Logon säätö */
 .logo-container {
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    justify-content: center; /* Muuta 'flex-start' 'flex-end'iksi siirtääksesi logon oikealle */
+    width: 40%; /* Täyttää koko leveydeltään */
+    margin-top: 20px; /* Lisää tilaa logon ylle */
 }
 
-
-/* Työn alla -tekstin tyylit */
-.under-construction {
-    font-size: 24px;
-    color: #3c113e;
-    margin-top: 20px;
-    font-weight: bold;
+/* Napin tyylit */
+.navbar button {
+    margin: 50px; /* Lisää tilaa nappien väliin */
+    padding: 20px 100px; /* Lisää sisältötilaa napin sisällä */
+    font-size: 58px; /* Suurentaa fonttikokoa */
+    background-color: #3c113e; /* Napin taustaväri */
+    color: white; /* Tekstin väri */
+    border: none; /* Poistaa napin reunat */
+    border-radius: 80px; /* Pyöristää kulmat */
+    cursor: pointer; /* Muuttaa osoittimen napin päällä */
 }
 
-/* Sähköpostiosoitteen tyylit */
-.contact {
-    margin-top: 10px;
-    font-size: 18px;
-    margin-top: 20px;
-    color: #555;
+.navbar button:hover {
+    background-color: #5a224d; /* Tummempi väri hover-tilassa */
 }
 
-/* Tyylit LinkedIn-logolle */
-.linkedin-logo {
-    width: 100px; /* Määritä logon leveys */
-    height: auto; /* Säilytä kuvasuhde */
+/* Päänavigeeraus ja linkkien tyylit */
+.navbar {
+    display: flex; /* Flexbox-käyttö */
+    justify-content: center; /* Keskittää vaakasuunnassa */
+    align-items: center; /* Keskittää pystysuunnassa */
+    margin-top: 20px; /* Lisää tilaa logon ylle */
+    flex-wrap: wrap; /* Salli nappien kääntyä seuraavalle riville pienissä näyttötiloissa */
 }
 
-
-/*.linkedin-badge {
-    /*text-align: center; /* Keskittää badge-elementin */
-    /*margin-top: 20px; /* Lisää tilaa badge ja muiden elementtien väliin */
-
-
-.contact a {
-    text-decoration: none;
-    color: #007acc; /* Sähköpostilinkin väri */
-}
-
-.contact a:hover {
-    text-decoration: underline; /* Korostus, kun linkin päällä on hiiri */
+/* Otsikon tyylit */
+h1 {
+    font-size: 150px; /* Suurentaa otsikon kokoa */
+    text-align: center; /* Keskittää otsikon */
+    margin: 20px; /* Lisää tilaa ylle */
+    color: #3c113e; /* Otsikon väri */
 }
 
 footer {
     background-color: #e0e0e0; /* Haalea harmaa taustaväri */
     color: #333; /* Tekstin väri */
     text-align: center; /* Keskitetty teksti */
-    padding: 10px 20; /* Ylä- ja alapadding */
-    position: auto; /* Sijoitetaan sivun alareunaan */
-    bottom: 0;
+    padding: 1px 1px; /* Ylä- ja alapadding */
     width: 100%; /* Kokoleveydeltä */
-    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.9); /* Kevyt varjo */
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2); /* Kevyt varjo */
     box-sizing: border-box; /* Sisällyttää padding laskuihin */
+    position: fixed; /* Kiinnittää footerin ikkunan alareunaan */
+    bottom: 0; /* Sijoittaa footerin alalaitaan */
+    left: 0; /* Tuo footerin kiinni vasempaan reunaan */
+    font-size: 24px;
 }
+
+/* Suurempi tekstin koko */
+.content-text {
+    font-size: 54px; /* Koko fontille, säädä tarpeen mukaan */
+    color: #333; /* Tekstin väri, voit vaihtaa haluamaksesi */
+    line-height: 1.5; /* Riviväli, jotta tekstistä tulee luettavampaa */
+    text-align: center; /* Keskittää tekstin */
+    margin: 20px 0; /* Lisää tilaa tekstin ylä- ja alapuolelle */
+}
+
 
 /* Musiikkisoittimen tyylit */
 audio {
     display: block;
     margin-bottom: 10px; /* Välit musiikkisoittimen ja tekstin välillä */
-    margin-top: 0px; /* Soittimen etäisyys yläpuolelta */
-    width: 350px; /* Haluttu leveys */
-    box-shadow: 1px -2px 15px rgba(1, 15, 498, 6); /* Kevyt varjo */
+    width: 100%; /* Haluttu leveys */
 }
