@@ -39,11 +39,17 @@ body {
     color: #555;
 }
 
-
-.linkedin-badge {
-    text-align: center; /* Keskittää badge-elementin */
-    margin-top: 20px; /* Lisää tilaa badge ja muiden elementtien väliin */
+/* Tyylit LinkedIn-logolle */
+.linkedin-logo {
+    width: 100px; /* Määritä logon leveys */
+    height: auto; /* Säilytä kuvasuhde */
 }
+
+
+/*.linkedin-badge {
+    /*text-align: center; /* Keskittää badge-elementin */
+    /*margin-top: 20px; /* Lisää tilaa badge ja muiden elementtien väliin */
+
 
 .contact a {
     text-decoration: none;
