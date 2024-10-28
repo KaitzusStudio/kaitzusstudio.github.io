@@ -3,15 +3,15 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 10vh;
-    /*background-image: url('images/taustakuva.png'); /* Polku taustakuvaan */
-   /* background-size: cover; /* Kattaa koko taustan */
-    /*background-position: center; /* Keskittää taustakuvan */
-    /*background-repeat: no-repeat;
-    height: 100%;*/
+    flex-direction: column; /* Elementit pystysuunnassa */
+    justify-content: flex-start; /* Sijoitetaan elementit ylhäältä alkaen */
+    align-items: center; /* Keskitetään vaakasuunnassa */
+    min-height: 100vh; /* Käytä vähintään koko näkymän korkeutta */
+    background-color: rgb(255, 255, 255); /* Taustaväri */
+}
+
+.content {
+    flex: 1; /* Tämä vie kaiken ylimääräisen tilan */
 }
 
 main {
@@ -22,7 +22,7 @@ main {
 
 /* Logon keskitys ja koko */
 .logo-container {
-    margin-top: 10px;
+    margin-top: 2vw;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -59,18 +59,15 @@ main {
     transform: scale(1.1); /* Hover-efekti */
 }
 
+
 /* Footer */
 footer {
     background-color: rgba(224, 224, 224, 0.8); /* Läpinäkyvä tausta */
     color: #333;
     text-align: center;
-    padding: 10px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
-    font-size: 14px; /* Suurempi fonttikoko footerille */
+    padding: 10px 20; /* Ylä- ja alapadding */
+    width: 100%; /* Kokoleveydeltä */
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.9); /* Kevyt varjo */
 }
 
 .linkedin-logo {
@@ -88,3 +85,4 @@ h1 {
     margin-top: 20px; /* Lisää tilaa ylle */
     color: #3c113e; /* Otsikon väri */
 }
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music - Kaitzus Studio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tracks.css"> <!-- Musiikkisivun erityistyylit -->
 </head>
 <body>
     <div class="logo-container">
@@ -16,20 +17,42 @@
         <a href="index.html"><img src="images/main-button.png" alt="Pääsivu" class="nav-button"></a>
         <a href="3dart.html"><img src="images/3dart-button.png" alt="3D Art" class="nav-button"></a>
         <a href="music.html"><img src="images/music-button.png" alt="Musiikki" class="nav-button"></a>
-        <a href="bio.html"><img src="images/bio-button.png" alt="Bio" class="nav-button"></a>
         <a href="contact.html"><img src="images/contact-button.png" alt="Yhteystiedot" class="nav-button"></a>
     </div>
 
     <div class="content">
-        <h1>Music</h1>
+        <h1>Musiikki</h1>
         <p class="content-text">DJ Likainen Tiski</p>
-        <!-- Lisää sisältöä tähän -->
+
+        <!-- Musiikkisoitin -->
+        <div class="music-player">
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Kappalelista -->
+        <div class="track-list">
+            <div class="track" data-audio="audio/background-music.wav">
+                <h2>Intro</h2>
+                <p>Tuottaja: DJ Likainen tiski</p>
+            </div>
+            <div class="track" data-audio="audio/ghost.wav">
+                <h2>Remix beat</h2>
+                <p>DJ Likainen Tiski.</p>
+            </div>
+            <div class="track" data-audio="audio/kaulinperse.wav">
+                <h2>Beat Kaulinperse</h2>
+                <p>Tuottaja: DJ MTN / DJ Likainen Tiski</p>
+            </div>
+        </div>
     </div>
 
     <footer>
         <p>© 2024 Kaitzus Studio. Kaikki oikeudet pidätetään.</p>
-    </footer>    
+    </footer>
 
-    <iframe src="music-player.html" style="display:none;" name="music-player" id="music-player" width="0" height="0"></iframe>
+    <script src="music.js"></script> <!-- Lisää tämä rivi -->
 </body>
 </html>

@@ -1,0 +1,21 @@
+/* visuals.css */
+.image-container {
+    display: flex; /* Käytetään flexboxia */
+    justify-content: center; /* Keskitetään vaakasuunnassa */
+    flex-wrap: wrap; /* Jos kuvia on useita, ne siirtyvät seuraavalle riville */
+    margin: 20px 0; /* Ylä- ja alapuolella tilaa */
+}
+
+.image-container img {
+    max-width: 30%; /* Kuvan leveys ei ylitä vanhemman elementin leveyttä */
+    height: auto; /* Korkeus skaalautuu automaattisesti */
+    margin: 10px; /* Kuvien väliin tilaa */
+    border-radius: 8px; /* Pyöristetyt kulmat kuville */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Varjo efekti */
+    transition: transform 0.3s; /* Sujuva siirtyminen */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Kuvan suurentaminen hoverin aikana */
+    cursor: pointer; /* Muutetaan osoitin kun hiiri on kuvan päällä */
+}

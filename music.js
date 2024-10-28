@@ -1,16 +1,14 @@
-window.addEventListener("DOMContentLoaded", () => {
-    const musicPlayer = document.getElementById("background-music");
-    const muteButton = document.getElementById("mute-button");
+document.addEventListener("DOMContentLoaded", function() {
+    const tracks = document.querySelectorAll(".track");
+    const audioPlayer = document.getElementById("audio-player");
+    const audioSource = document.getElementById("audio-source");
 
-    // Hae mykistysasetus localStoragesta
-    const isMuted = localStorage.getItem("isMuted") === "true";
-    musicPlayer.muted = isMuted;
-    muteButton.textContent = isMuted ? "Unmute" : "Mute";
-
-    // Lisää napin toiminta mykistykselle
-    muteButton.addEventListener("click", () => {
-        musicPlayer.muted = !musicPlayer.muted;
-        localStorage.setItem("isMuted", musicPlayer.muted);
-        muteButton.textContent = musicPlayer.muted ? "Unmute" : "Mute";
+    tracks.forEach(track => {
+        track.addEventListener("click", function() {
+            const audioFile = this.getAttribute("data-audio");
+            audioSource.src = audioFile; // Asetetaan musiikkitiedoston polku
+            audioPlayer.load(); // Ladataan uusi kappale
+            audioPlayer.play(); // Soitetaan kappale
+        });
     });
 });
