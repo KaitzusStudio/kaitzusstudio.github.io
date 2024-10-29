@@ -39,9 +39,9 @@ main {
 /* Button-container, joka keskittää napit vaakasuunnassa */
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 8rem; /* Tilaa nappien väliin tietokoneilla */
+    gap: 3rem; /* Tilaa nappien väliin tietokoneilla */
     margin-top: 3rem;
 }
 
@@ -118,7 +118,7 @@ p {
         gap: 1rem; /* Vähemmän tilaa nappien välillä mobiilissa */
     }
     .nav-button {
-        width: 100%; /* Hieman pienempi koko mobiilissa */
+        width: 15rem; /* Hieman pienempi koko mobiilissa */
     }
     h1 {
         height: 8rem; /* Kiinteä korkeus h1-elementille */
@@ -127,7 +127,7 @@ p {
         height: 10rem; /* Kiinteä korkeus h2-elementille */
     }
     .logo {
-        width: 20vh; /* Kiinteä leveys logo-elementille */
+        width: 50%; /* Kiinteä leveys logo-elementille */
     }
     footer {
         height: 5vh; /* Kiinteä korkeus footerille */
