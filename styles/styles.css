@@ -68,7 +68,7 @@ main {
 }
 
 .linkedin-logo {
-    width: 10rem; /* Voit säätää leveyttä haluamasi mukaan */
+    width: 15rem; /* Voit säätää leveyttä haluamasi mukaan */
     height: auto; /* Säilyttää kuvasuhteet */
     margin-top: 3em; /* Välitää logon ja tekstin väliin */
     display: block; /* Estää tekstin kääntymisen logon ympärille */
@@ -93,7 +93,7 @@ h2 {
 }
 
 p {
-    font-size: 14px; /* Suurentaa otsikon kokoa */
+    font-size: 12px; /* Suurentaa otsikon kokoa */
     text-align: center; /* Keskittää otsikon */
     margin-top: 1rem; /* Lisää tilaa ylle */
     color: #3c113e; /* Otsikon väri */
@@ -105,10 +105,10 @@ footer {
     background-color: rgba(224, 224, 224, 0.8); /* Läpinäkyvä tausta */
     color: #333;
     text-align: center;
-    padding: 10px 0; /* Ylä- ja alapadding */
+    padding: 5px 0; /* Ylä- ja alapadding */
     width: 100%; /* Kokoleveydeltä */
     box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.9); /* Kevyt varjo */
-    height: 10px; /* Kiinteä korkeus */
+    height: 4vh; /* Kiinteä korkeus */
     display: flex;
     justify-content: center;
     align-items: center;
