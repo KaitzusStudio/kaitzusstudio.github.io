@@ -1,8 +1,6 @@
 /* Yleisasetukset: Poistetaan marginaalit ja lisätään taustakuva */
 body {
     font-size: 18px; /* Oletusfonttikoko mobiilille */
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column; /* Elementit pystysuunnassa */
     justify-content: flex-start; /* Sijoitetaan elementit ylhäältä alkaen */
@@ -11,17 +9,14 @@ body {
     background-color: rgb(255, 255, 255); /* Taustaväri */
 }
 
-
 .content {
     flex: 1; /* Tämä vie kaiken ylimääräisen tilan */
+    width: 100%; /* Varmista, että sisältö vie koko leveydeltä */
 }
 
 main {
     flex: 1; /* Joustaa ja täyttää lopun tilan */
-    padding: 20%; /* Lisää tilaa sisällölle */
 }
-
-
 /* Logon keskitys ja koko */
 .logo-container {
     margin-top: 2vw;
@@ -33,7 +28,6 @@ main {
 .logo {
     width: 30em; /* Skaalaa logoa suhteessa ikkunan leveyteen */
     max-width: 100%; /* Maksimileveys */
-    /*height: 100%;*/
 }
 
 /* Button-container, joka keskittää napit vaakasuunnassa */
@@ -49,7 +43,7 @@ main {
 .nav-button {
     width: 20rem;            /* Skaalaa nappeja suhteessa ikkunan korkeuteen */
     max-width: 100%;        /* Maksimikoko nappikuville */
-    height: 100%;
+    height: auto;
     transition: transform 0.1s; /* Smooth-efekti */
 }
 
@@ -57,23 +51,6 @@ main {
 .nav-button:hover {
     transform: scale(1.1);  /* Pienennä nappia hieman */
 }
-
-
-
-/* Footer */
-footer {
-    background-color: rgba(224, 224, 224, 0.8); /* Läpinäkyvä tausta */
-    color: #333;
-    text-align: center;
-    padding: 10px 20; /* Ylä- ja alapadding */
-    width: 100%; /* Kokoleveydeltä */
-    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.9); /* Kevyt varjo */
-    height: 40px; /* Kiinteä korkeus */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .linkedin-logo {
     width: 20rem; /* Voit säätää leveyttä haluamasi mukaan */
@@ -92,8 +69,6 @@ h1 {
     justify-content: center; /* Keskitetään vaakasuunnassa */
 }
 
-   
-
 h2 {
     font-size: 30px; /* Suurentaa otsikon kokoa */
     text-align: center; /* Keskittää otsikon */
@@ -103,11 +78,25 @@ h2 {
 }
 
 p {
-    font-size: 10px; /* Suurentaa otsikon kokoa */
+    font-size: 14px; /* Suurentaa otsikon kokoa */
     text-align: center; /* Keskittää otsikon */
     margin-top: 0.5rem; /* Lisää tilaa ylle */
     color: #3c113e; /* Otsikon väri */
     justify-content: center; /* Keskitetään vaakasuunnassa */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(224, 224, 224, 0.8); /* Läpinäkyvä tausta */
+    color: #333;
+    text-align: center;
+    padding: 10px 20; /* Ylä- ja alapadding */
+    width: 100%; /* Kokoleveydeltä */
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.9); /* Kevyt varjo */
+    height: 40px; /* Kiinteä korkeus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
