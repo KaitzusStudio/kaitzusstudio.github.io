@@ -109,32 +109,5 @@ p {
     color: #3c113e; /* Otsikon väri */
     justify-content: center; /* Keskitetään vaakasuunnassa */
 }
-/* Mobiilinäytön tyylit (max-leveys 768px, yleinen raja mobiililaitteille) */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Oletuskoko mobiilille */
-    }
-    .button-container {
-        gap: 1rem; /* Vähemmän tilaa nappien välillä mobiilissa */
-    }
-    .nav-button {
-        width: 15rem; /* Hieman pienempi koko mobiilissa */
-    }
-    h1 {
-        height: 8rem; /* Kiinteä korkeus h1-elementille */
-    }
-    h2 {
-        height: 10rem; /* Kiinteä korkeus h2-elementille */
-    }
-    .logo {
-        width: 50%; /* Kiinteä leveys logo-elementille */
-    }
-    footer {
-        height: 5vh; /* Kiinteä korkeus footerille */
-    }
-    .linkedin-logo {
-        width: 150px; /* Kiinteä leveys LinkedIn-logolle */
-    }
-}
 
 
