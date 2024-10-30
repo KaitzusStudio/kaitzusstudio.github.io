@@ -1,0 +1,57 @@
+body {
+    background-color: #ffffff; /* Taustaväri musiikkisivulle */
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.content {
+    max-width: 600px; /* Rajoittaa sisällön leveyttä */
+    width: 100%; /* Mukautuu näkymän leveyteen */
+    margin: 5vh auto; /* Keskittää sisällön */
+    padding: 1rem; /* Lisää tilaa sisällön ympärille */
+    background-color: #b93033d1; /* Valkoinen tausta sisällölle */
+    border-radius: 10px; /* Pyöristää kulmat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Varjo */
+}
+
+h1 {
+    text-align: center; /* Keskittää otsikon */
+    font-size: 32px; /* Otsikon koko */
+    margin-bottom: 1rem; /* Lisää tilaa otsikon alle */
+}
+
+.track {
+    border: 1px solid #ccc; /* Kehyksen väri */
+    margin: 0.5rem 0; /* Erottelee kappaleet kevyesti */
+    padding: 0.75rem; /* Lisää tilaa sisällön ympärille */
+    border-radius: 8px; /* Pyöristää kulmat */
+    background-color: #fafafa; /* Taustaväri */
+    cursor: pointer; /* Muuttaa osoitinta, kun hiiri on kappaleen päällä */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Sujuva siirtymä */
+}
+
+.track:hover {
+    background-color: #e0e0e0; /* Taustaväri, kun hiiri on päällä */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjon lisäys hoverilla */
+}
+
+/* Kappaleen nimen korostaminen */
+.track h2 {
+    font-size: 20px; /* Kappaleen nimen koko */
+    background-color: #d0d0d0; /* Taustaväri kappaleen nimelle */
+    padding: 0.3rem; /* Lisää tilaa taustavärin ympärille */
+    border-radius: 5px; /* Pyöristää kulmat */
+    transition: background-color 0.3s; /* Sujuva siirtymä taustavärissä */
+}
+
+/* Kappaleen nimen korostus, kun hiiri on päällä */
+.track:hover h2 {
+    background-color: #b0b0b0; /* Tumma taustaväri, kun hiiri on päällä */
+}
+
+.music-player {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; /* Lisää marginaalia ympärille */
+}
